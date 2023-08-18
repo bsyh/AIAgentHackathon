@@ -45,6 +45,7 @@ The graph indicates a workflow from a user entering the webpage of our product t
 	```
 	export OPENAI_API_KEY=[YOUR_KEY_HERE]
 	```
+	you can get your key from [OpenAI API keys](https://platform.openai.com/account/api-keys)
 4. run the script
 	```
 	python chatbot.py
