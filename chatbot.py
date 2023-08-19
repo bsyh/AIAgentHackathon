@@ -7,8 +7,9 @@ from langchain.chat_models import ChatOpenAI
 from nicegui import Client, ui
 import os
 
+os.environ["OPENAI_API_KEY"] = "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"
 
-OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
+OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 
 llm = ConversationChain(llm=ChatOpenAI(model_name='gpt-3.5-turbo', openai_api_key=OPENAI_API_KEY))
 
