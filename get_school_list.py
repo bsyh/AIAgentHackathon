@@ -1,9 +1,9 @@
-from gpt_utils import get_list
+from gpt_utils import get_json
 
 
 prompt = [
     {"role": "system", "content": "You are a helpful assistant. You give advices for university master programs."},
-    {"role": "user", "content": "Provide a list of schools in Canada that has strong computing science program."}
+    {"role": "user", "content": "Provide a list of schools in Canada that has strong computer science program."}
   ]
 
 schema = {
@@ -20,7 +20,7 @@ schema = {
   "required": ["school_list"]
 }
 
-print(get_list(prompt=prompt, schema=schema))
+print(get_json(prompt=prompt, schema=schema))
 
 """
 Result will be returned in JSON such as:

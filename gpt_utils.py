@@ -40,7 +40,18 @@ default_schema = {
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-def get_list(schema=default_schema, prompt=default_prompt, temperature=0):
+def get_json(schema=default_schema, prompt=default_prompt, temperature=0):
+    """_summary_
+
+    Args:
+        schema (dic, optional): the format of expected response. Defaults to default_schema.
+        prompt (list, optional): list of prompts for GPT. Defaults to default_prompt.
+        temperature (int, optional): how much gpt will generate confident content. Defaults to 0.
+
+    Returns:
+        _type_: response JSON in string
+    """
+    
 
     completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo-0613",
