@@ -5,7 +5,7 @@ from langchain.chat_models import ChatOpenAI
 import time
 import os
 
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "MY_OPENAI_API_KEY"
 
 llm = ConversationChain(llm=ChatOpenAI(model_name='gpt-3.5-turbo', openai_api_key=OPENAI_API_KEY))
 
