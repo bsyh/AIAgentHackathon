@@ -50,6 +50,16 @@ async def ask_gpt():
 
     return jsonify({"result": response})  # 将结果包装为 JSON 格式并返回
 
+@app.route('/conversation', methods=['POST'])
+def conversation():
+    data = request.get_json()
+    user_response = data.get("user_response").strip()
+
+    # Assuming pop_response(x) is a function that processes the user response and generates the AI's response
+    response = pop_response(user_response)
+
+    return jsonify({"result": response})
+
 
 # 1. debug 模式：开启后，代码修改后，服务器会自动重启
 # 2. host 参数：默认值是0.0.0.0，表示可以通过本机IP被外界访问
